@@ -1,20 +1,33 @@
 <%- include("partials/header") -%>
 
+<div class="container">
+  <h1>Compose A Post</h1>
 
+  <form action="/compose" method="post">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        placeholder="Post Title"
+        name="postTitle"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="body-m">Post Body</label>
+      <textarea
+        name="postToPublish"
+        rows="8"
+        cols="80"
+        class="form-control"
+        required
+      ></textarea>
+    </div>
 
-<form action="/compose" method="post">
-  <div class="form-group">
-    <label for="title">Title</label>
-    <input type="text" class="form-control" id="title" placeholder="Post Title" name="postTitle" required>
-  </div>
-  <div class="form-group">
-    <label for="body-m">Post Body</label>
-      <textarea name="postToPublish" rows="8" cols="80" class="form-control" required></textarea>
-  </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
 
 <%- include("partials/footer") -%>

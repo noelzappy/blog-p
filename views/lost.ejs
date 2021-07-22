@@ -1,4 +1,15 @@
 <%- include("partials/header") -%>
-<h4>The Page You Requested is Missing</h4>
+<div class="container center-content">
+  <h4>The Page You Requested is Missing</h4>
+
+  <div>
+    <button type="button" class="btn btn-danger" id="home_btn">Go Home</button>
+  </div>
+</div>
+<script>
+  document.getElementById("home_btn").addEventListener("click", () => {
+    window.location.href = "/";
+  });
+</script>
 
 <%- include("partials/footer") -%>
